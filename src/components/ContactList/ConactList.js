@@ -1,3 +1,4 @@
+import {ListItem, Item, ListButton} from './ContactList.styled'
 export const ContactList =({contacts, onDeleteContact})=>{
     // console.log(typeof contacts);
     // contacts.map(element => {
@@ -5,16 +6,15 @@ export const ContactList =({contacts, onDeleteContact})=>{
     // });
     
     return(
-        <ul>
-            <p>Contacts</p>
+        <ListItem>
+            
             {contacts.map(({id, name, number}) => (
-                <li key={id}>
-                    <span></span>
+                <Item key={id}>
                     <p>{name}:{number}</p>
-                    <button  onClick={( )=> onDeleteContact(id)}>Delete</button>
-                </li>
+                    <ListButton  onClick={( )=> onDeleteContact(id)}>Delete</ListButton>
+                </Item>
             ))}
-    </ul>
+    </ListItem>
 
     )
 }

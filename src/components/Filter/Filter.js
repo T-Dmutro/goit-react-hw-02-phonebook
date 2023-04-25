@@ -1,6 +1,7 @@
+import { LabelContact, InputContact} from "./Filter.styled";
 import React from "react";
 export const Filter =({value, onChange})=>(
-    <input type="text" value={value} onChange={onChange} />
+    <LabelContact >Find contact by name<InputContact type="text" value={value} onChange={onChange} /> </LabelContact>
 )
 
 

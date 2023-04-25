@@ -1,6 +1,7 @@
 import React from 'react';
 
 import  InputForm  from "components/Form/InputFotm"
+import { Container,Section,TitleContacts,Title } from './app.styled';
 import { ContactList } from 'components/ContactList/ConactList';
 import {Filter} from 'components/Filter/Filter';
 
@@ -57,12 +58,18 @@ deleteContact= (contaktId)=>{
   
     // console.log(this.state.contacts)
   return (
-    <div>
+    <Container>
+      <Section title="Phonebook">
+      <Title>Phonebook</Title>
       <InputForm onSubmit={this.formSubmit} />
+      </Section>
+      <Section title="Contacts">
+      <TitleContacts>Contacts</TitleContacts>
       <Filter value={this.state.filter} onChange={this.changeFilter} />
       {/* <Filter onFilterSubmit={this.filter} /> */}
       <ContactList contacts={this.getContact()} onDeleteContact={this.deleteContact} />
-    </div>
+      </Section>
+    </Container>
   );
 };
  }
