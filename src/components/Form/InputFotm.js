@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid'
 // import { Formik , Form , Field , ErrorMessage } from 'formik';
 import { Input , Label, AddButton, Forma} from "./InputForm.styled";
@@ -58,6 +59,9 @@ resetForm=()=>this.setState({name: '',number: "", id:""});
 }
 }
 
-
+Forma.propTypes = {
+    value:PropTypes.string,
+    onChange:PropTypes.func,
+}
 
 export default InputForm;

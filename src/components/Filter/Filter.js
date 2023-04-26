@@ -1,10 +1,14 @@
 import { LabelContact, InputContact} from "./Filter.styled";
+import PropTypes from 'prop-types';
 import React from "react";
 export const Filter =({value, onChange})=>(
     <LabelContact >Find contact by name<InputContact type="text" value={value} onChange={onChange} /> </LabelContact>
 )
 
-
+Filter.propTypes = {
+    value:PropTypes.string.isRequired,
+    onChange:PropTypes.func.isRequired,
+}
 
 
 

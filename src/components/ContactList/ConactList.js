@@ -1,4 +1,6 @@
 import {ListItem, Item, ListButton} from './ContactList.styled'
+import PropTypes from 'prop-types';
+
 export const ContactList =({contacts, onDeleteContact})=>{
     // console.log(typeof contacts);
     // contacts.map(element => {
@@ -19,3 +21,9 @@ export const ContactList =({contacts, onDeleteContact})=>{
     )
 }
 
+ListItem.propTypes = {
+    id:PropTypes.string,
+    name:PropTypes.string,
+    number:PropTypes.string,
+    onDeleteContact:PropTypes.func,
+}
